@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <!-- This is a redirect specifically from the whatsapp group description to the join whatsapp group link, in order to keep whatsapp description (and link people share) looking clean -->
+
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZRG6ZN7KF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-LZRG6ZN7KF');
+
+            gtag('event', 'redirect', {
+                'event_category': 'outbound',
+                'event_label': 'instagram',
+                'transport_type': 'beacon',
+                'event_callback': function () { document.location = "https://links.broadwaywithatwist.xyz/whatsapp?utm_source=whatsapp&utm_medium=whatsapp-group&utm_campaign=general-posting&utm_content=whatsapp-group-description"; }
+            });
+        </script>
+    </head>
+
+    <body>
+    </body>
+
+</html>
