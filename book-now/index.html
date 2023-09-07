@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <!-- This is a redirect specifically from the whatsapp group description to lineapp, in order to keep whatsapp description looking clean -->
+
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZRG6ZN7KF"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'G-LZRG6ZN7KF');
+
+            gtag('event', 'redirect', {
+                'event_category': 'outbound',
+                'event_label': 'whatsapp-group-description-to-lineapp',
+                'transport_type': 'beacon',
+                'event_callback': function () { document.location = "https://links.broadwaywithatwist.xyz/tickets?utm_campaign=whatsapp-description&utm_medium=whatsapp&utm_source=whatsapp-description"; }
+            });
+        </script>
+    </head>
+
+    <body>
+    </body>
+
+</html>
