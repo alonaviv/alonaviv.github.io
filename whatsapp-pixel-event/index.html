@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<!-- This is a redirect to Whatsapp that sends a meta Pixel event along with a Google Analytics event.
+ It's meant to be used in the lineapp site, so Facebook can track user journeys from an ad through lineapp to the whatsapp group.
+ The event will be sent to Facebook Pixel, which will associate it with the user that clicked on the ad.
+ -->
+
+<head>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '6744140815608666');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=6744140815608666&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZRG6ZN7KF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-LZRG6ZN7KF');
+
+        gtag('event', 'redirect', {
+            'event_category': 'outbound',
+            'event_label': 'whatsapp',
+            'transport_type': 'beacon',
+            'event_callback': function () {
+                fbq('trackCustom', 'JoinWhatsApp'); // Fire the Facebook Pixel event
+                document.location = "https://chat.whatsapp.com/La9NtdsfoXC0xKnCVjTdIw";
+            }
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
