@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZRG6ZN7KF"></script>
-        <script>
-            try {
-                window.dataLayer = window.dataLayer || [];
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZRG6ZN7KF"></script>
 
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e); t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '6744140815608666');
+    fbq('track', 'PageView');
+    fbq('trackCustom', 'WhatsappLinkClick', {
+      source: 'primary-text-ad-link',
+      campaign: 'april-effort'
+    });
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=6744140815608666&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
-                gtag('js', new Date());
+  <script>
+    try {
+      window.dataLayer = window.dataLayer || [];
 
-                gtag('config', 'G-LZRG6ZN7KF');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
 
-                gtag('event', 'redirect', {
-                    'event_category': 'outbound',
-                    'event_label': 'whatsapp',
-                    'transport_type': 'beacon',
-                    'event_callback': function () {
-                        // WHEN YOU CHANGE THIS - CHANGE whatsapp-pixel-event AS WELL!!
-                        document.location = "https://chat.whatsapp.com/Ltlc0kB2n6II4A6wXDeNas";
-                    }
-                });
-                document.location = "https://chat.whatsapp.com/Ltlc0kB2n6II4A6wXDeNas";
-            } catch (e) {
-               document.location = "https://chat.whatsapp.com/Ltlc0kB2n6II4A6wXDeNas";
-            }
-        </script>
-    </head>
+      gtag('js', new Date());
+      gtag('config', 'G-LZRG6ZN7KF');
 
-    <body>
-    </body>
+      gtag('event', 'redirect', {
+        'event_category': 'outbound',
+        'event_label': 'whatsapp',
+        'transport_type': 'beacon',
+        'event_callback': function () {
+          // WHEN YOU CHANGE THIS - CHANGE whatsapp-pixel-event AS WELL!!
+          document.location = "https://chat.whatsapp.com/Ltlc0kB2n6II4A6wXDeNas";
+        }
+      });
+      document.location = "https://chat.whatsapp.com/Ltlc0kB2n6II4A6wXDeNas";
+    } catch (e) {
+      document.location = "https://chat.whatsapp.com/Ltlc0kB2n6II4A6wXDeNas";
+    }
+  </script>
+</head>
+
+<body>
+</body>
 
 </html>
