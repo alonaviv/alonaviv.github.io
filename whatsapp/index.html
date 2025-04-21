@@ -26,7 +26,9 @@
       'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '6744140815608666');
     fbq('track', 'PageView');
-    fbq('trackCustom','WhatsappLinkClick');
+    if (!document.referrer.includes('tickchak')) { // Tickchak already sends the event on link click
+      fbq('trackCustom', 'WhatsappLinkClick');
+    }
 
   </script>
   <noscript>
