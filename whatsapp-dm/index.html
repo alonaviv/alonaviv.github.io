@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <!-- This is a redirect specifically from the personal WhatsApp messages sent on event day to ticket holders who aren't in the silent groups, to the join whatsapp group link, so GA counts these joins separately -->
+
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZRG6ZN7KF"></script>
+        <script>
+            try {
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                gtag('js', new Date());
+
+                gtag('config', 'G-LZRG6ZN7KF');
+
+                gtag('event', 'redirect', {
+                    'event_category': 'outbound',
+                    'event_label': 'ticket-holder-dm-to-whatsapp',
+                    'transport_type': 'beacon',
+                    'event_callback': function () {
+                        document.location = "https://links.broadwaywithatwist.xyz/whatsapp?utm_campaign=ticket-holder-dm&utm_medium=whatsapp&utm_source=whatsapp-dm";
+                    }
+                });
+                document.location = "https://links.broadwaywithatwist.xyz/whatsapp?utm_campaign=ticket-holder-dm&utm_medium=whatsapp&utm_source=whatsapp-dm";
+            } catch (e) {
+                document.location = "https://links.broadwaywithatwist.xyz/whatsapp?utm_campaign=ticket-holder-dm&utm_medium=whatsapp&utm_source=whatsapp-dm";
+            }
+
+        </script>
+    </head>
+
+    <body>
+    </body>
+
+</html>
